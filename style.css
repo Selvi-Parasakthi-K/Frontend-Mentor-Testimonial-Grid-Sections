@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Young+Serif&display=swap");
+
+:root {
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --Moderate-violet:hsl(263, 55%, 52%);
+    --Semi-Transparent-Violet:hsla(262, 66%, 75%, 0.582);
+    --Very-dark-grayish-blue:hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue:hsl(219, 29%, 14%);
+    --Semi-Transparent-dark-blackish-blue:hsla(219, 29%, 14%,0.5);
+    --White:hsl(0, 0%, 100%);
+    --Semi-Transparent-White:hsla(0, 0%, 100%, 0.5);
+}
+
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.card-1 {
+    grid-area: daniel;
+}
+
+.card-2 {
+    grid-area:jonathan;
+}
+
+.card-3 {
+    grid-area: kira;
+}
+
+.card-4 {
+    grid-area: jeanette;
+}
+
+.card-5 {
+    grid-area: patrick;
+}
+
+.testimonial-cards {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 18rem);
+    grid-template-areas: 
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+}
+
+.card-4, .card-3 {
+    box-shadow: 2.5rem 3rem 2.5rem -2.5rem hsla(217, 19%, 35%, 0.25);
+}
+
+@media only screen and (max-width: 769px) {
+    .testimonial-cards {
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas: 
+            "daniel"
+            "jonathan"
+            "jeanette"
+            "patrick"
+            "kira";
+    }
+
+    main {
+        margin: 2rem 0rem;
+    }
+}
